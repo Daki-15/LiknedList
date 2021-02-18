@@ -1,0 +1,7 @@
+void Print(Node *list){
+    while(list!=NULL){
+        printf("%d ----> ",list->data);
+        list=list->next;
+    }
+    printf("NULL\n");
+}
