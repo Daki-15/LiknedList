@@ -1,0 +1,26 @@
+Node *addEnd(int data, Node *head){
+
+    Node *temp=head;
+    while (temp != NULL && temp->next != NULL)
+    {
+        temp=temp->next;
+    }
+
+    Node *elem=(Node*)malloc(sizeof(Node));
+
+    if(elem==NULL){
+        printf("\nAlokacija error\n");
+        exit(1);
+    }
+
+    elem->data=data;
+    elem->next=NULL;
+
+    if(temp != NULL){
+        temp->next=elem;
+    } else {
+        head=elem;
+    }
+
+    return head;
+}
