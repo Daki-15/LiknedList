@@ -1,0 +1,14 @@
+Node *addBegin(int data, Node *head){
+
+    Node *temp=(Node*)malloc(sizeof(Node));
+
+    if(temp==NULL){
+        printf("\nError\n");
+        exit(1);
+    }
+
+    temp->data=data;
+    temp->next=head;
+
+    return temp;
+}
