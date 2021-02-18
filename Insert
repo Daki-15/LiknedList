@@ -1,0 +1,15 @@
+Node *inversList(Node *list){
+
+    Node *priv, *current, *next;
+    current=list;
+    priv=NULL;
+    while(current!=NULL){
+        next=current->next;
+        current->next=priv;
+        priv=current;
+        current=next;
+    }
+    list=priv;
+
+    return list;
+}
