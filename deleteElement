@@ -1,0 +1,21 @@
+Node *Delete(int data, Node *list){
+
+    Node *temp=list;
+
+    if(temp != NULL && temp->data==data){
+        temp=temp->next;
+        return temp;
+    }
+
+    while(temp != NULL && temp->next->data != data){
+        temp=temp->next;
+    }
+
+    if(temp==NULL){
+        return temp;
+    }
+
+    temp->next=temp->next->next;
+
+    return temp;
+}
